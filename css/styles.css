@@ -1,0 +1,98 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  background: #f4f4f4;
+}
+
+.navbar {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.conteudo__geral {
+  flex: 1;
+  padding: 20px;
+  background: #fff;
+}
+
+.perfil {
+  text-align: center;
+  padding: 20px;
+}
+
+.sobre-mim {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hover-h5 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.p {
+  font-size: 1.2em;
+  color: #666;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.caixa__icones {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+}
+
+.underline {
+  font-size: 1.5em;
+  text-decoration: underline;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.caixa__icones a {
+  margin: 0 10px;
+  color: #333;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  position: relative;
+}

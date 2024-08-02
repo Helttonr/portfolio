@@ -1,0 +1,319 @@
+/* Barra de Navegação */
+/* Estilo base */
+
+
+
+
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 1em;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    text-decoration: none;
+    color: #000; /* Cor padrão do texto */
+    font-weight: bold; /* Pode ajustar conforme desejado */
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(45deg, #ffffff, #ff7300, #fffb00, #3cff00, #00d4ff, #002eff);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: color 0.3s ease;
+
+
+}
+
+
+/* Adiciona padding ao conteúdo para não ficar escondido atrás da navbar */
+body {
+    padding-top: 80px;
+      font-family: "Nunito", cursive;
+    color: #efefef;
+    text-align: center;
+    padding: 6;
+    background-color: #212123;}
+
+
+
+.habilidades {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.habilidades h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.habilidades ul {
+    list-style: none;
+    padding: 0;
+}
+
+.habilidades li {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+.habilidades li::before {
+    content: "• ";
+    color: #fbd52d;
+    font-weight: bold;
+}
+
+
+
+
+
+.caixa__icones {
+    margin: 1em 0;
+}
+
+.caixa__icones a {
+    color: #efefef;
+    margin: 0 0.5em;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.caixa__icones a:hover {
+    color: #fbd52d;
+}
+
+
+
+.conteudo__geral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-carrossel {
+    --widthItem: 120px;
+    --heightItem: 100px;
+    width: var(--widthItem);
+    height: var(--heightItem);
+    perspective: 1000px;
+}
+
+.carrossel-item::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    font-size: 14px;
+}
+
+.carrossel-item:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.carrossel {
+    --rotatey: 0;
+    font-size: 4rem;
+    position: relative;
+    transform: rotatey(var(--rotatey));
+    transform-style: preserve-3d;
+    user-select: none;
+    cursor: grab;
+    transition: transform 0.5s ease;
+}
+
+.carrossel-item {
+    opacity: 0.5;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: opacity 0.5s;
+}
+
+.carrossel-item:hover {
+    opacity: 1;
+}
+
+.carrossel,
+.carrossel-item {
+    width: 100%;
+    height: 100%;
+}
+
+.carrossel-item:nth-child(1) {
+    --rotatey: 0;
+    transform: rotatey(var(--rotatey)) translatez(var(--tz));
+    background: linear-gradient(-229deg, #fbd52d, #ef3a7b);
+}
+
+.carrossel-item:nth-child(2) {
+    --rotatey: 0;
+    transform: rotatey(var(--rotatey)) translatez(var(--tz));
+    background: linear-gradient(-229deg, #ff70af, #5fa8f5);
+}
+
+.carrossel-item:nth-child(3) {
+    --rotatey: 0;
+    transform: rotatey(var(--rotatey)) translatez(var(--tz));
+    background: linear-gradient(-229deg, #0cebeb, #29ffc6);
+}
+
+.carrossel-item:nth-child(4) {
+    --rotatey: 0;
+    transform: rotatey(var(--rotatey)) translatez(var(--tz));
+    background: linear-gradient(-229deg, #88f7f9, #048fff);
+}
+
+.carrossel-item:nth-child(5) {
+    --rotate: 0;
+    transform: rotatey(var(--rotatey)) translatez(var(--tz));
+    background: linear-gradient(-229deg, #0093e9, #80d0c7);
+}
+
+.carrossel-item:nth-child(6) {
+    --rotatey: 0;
+    transform: rotatey(var(--rotatey)) translatez(var(--tz));
+    background: linear-gradient(-229deg, #cf91ff, #5782f5);
+}
+
+.carrossel-item:nth-child(7) {
+    --rotatey: 0;
+    transform: rotatey(var(--rotatey)) translatez(var(--tz));
+    background: linear-gradient(-229deg, #6abb3b, #5782f5);
+}
+
+@media screen and (min-width: 576px) {
+    .container-carrossel {
+        --widthItem: 250px;
+        --heightItem: 200px;
+    }
+}
+
+
+
+
+.hover-h5 {
+
+    color: #ffffff;
+    /* Cor inicial */
+    transition: color 0.3s ease;
+    /* Transição suave */
+    background: linear-gradient(45deg, #ffffff, #ffffff, #ff7300, #fffb00, #3cff00, #00d4ff, #002eff);
+    background-size: 600% 600%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 2em;
+    /* Ajuste o tamanho conforme necessário */
+    transition: background-position 0.5s ease;
+}
+
+/* Estilo para o efeito de hover */
+.hover-h5:hover {
+    background-position: 100% 0;
+}
+
+
+/* Favicon Icone CSS para o Efeito Pulsante */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulsar {
+    animation: pulse 1s infinite;
+}
+
+.underline {
+    display: inline-block;
+    border-bottom: 2px solid rgb(247, 241, 241); /* Ajuste a cor e espessura conforme necessário */
+    padding-bottom: 3px; /* Espaço entre o texto e o sublinhado */
+}
+.p {
+    color: #ffffff;
+    transition: color 0.3s ease;
+    background: linear-gradient(45deg, #ffffff, #ffffff, #ff7300, #fffb00, #3cff00, #00d4ff, #002eff);
+    background-size: 600% 600%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 15px;
+    transition: background-position 0.5s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.p:hover {
+    animation: waterEffect 1s infinite;
+}
+
+@keyframes waterEffect {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+}
